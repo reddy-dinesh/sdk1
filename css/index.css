@@ -1,0 +1,464 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-labels {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #004685;
+  display: block;
+  margin-left: 10px;
+}
+
+.login-input-field {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  font-family: sans-serif;
+}
+
+.login-submit-btn {
+  height: 45px;
+  width: 150px;
+  font-size: 14px;
+  background-color: #4257f5;
+  border: 0px;
+  border-radius: 11px;
+  color: white;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.login-submit-btn:hover {
+  background-color: #4257f5;
+}
+
+.update-chat-container {
+  color: black;
+}
+
+.hideLoginContainer {
+  display: none !important;
+}
+
+.logout-side-bar-user {
+  font-family: sans-serif;
+}
+
+.logout-btn {
+  background-color: white !important;
+  border: 2px solid red !important;
+  color: red !important;
+  margin-top: 20px !important;
+  padding: 15px !important;
+}
+
+.logout-user-icon {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  height: 54px;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+.menu-icon-logout {
+  font-size: 20px;
+}
+
+/* overring the default kore header styles */
+.kore-chat-window {
+  height: 100vh !important;
+  width: 100% !important;
+  margin: 0px !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  max-height: 100% !important;
+}
+
+.kore-chat-header {
+  height: 130px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background-color: white !important;
+}
+
+.kore-chat-window .kore-chat-body {
+  position: absolute !important;
+  width: 100% !important;
+  top: 120px !important;
+  bottom: 26px !important;
+  background-color: var(--sdk-chat-window-body-bg);
+  font-family: "Lato", sans-serif;
+  font-size: 14px !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.kore-header-shadow {
+  z-index: 1 !important;
+  width: 100% !important;
+  height: 110px;
+  display: block;
+  position: absolute !important;
+  left: 0px !important;
+  background-color: red !important;
+  top: 116px !important;
+  height: 4px !important;
+}
+
+.header-container {
+  display: flex;
+}
+
+.header-titlesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-username {
+  color: black !important;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.header-greetingMsg {
+  color: black;
+  font-weight: 100;
+  font-size: 14px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.botName {
+  font-family: "Johnson Text", Helvetica, Arial, sans-serif !important;
+  font-size: 26px !important;
+  font-style: normal !important;
+  font-weight: 450 !important;
+  line-height: normal !important;
+  color: #c8102e !important;
+}
+
+.chatbot-header-text {
+  font-family: "Johnson Text", Helvetica, Arial, sans-serif !important;
+  font-size: 26px !important;
+  font-style: normal !important;
+  font-weight: 450 !important;
+  line-height: normal !important;
+  color: black !important;
+}
+
+/* side drawer styles */
+.side-drawer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.side-drawer .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.sidedrawer-close-btn {
+  text-align: right;
+  display: contents;
+}
+
+.side-drawer-content {
+  padding: 20px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn-fa {
+  color: black;
+  margin-left: auto;
+  font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.logout-user-icon {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  height: 54px;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+.logout-user-icon {
+  font-family: sans-serif;
+}
+
+.logout-btn {
+  background-color: white !important;
+  border: 2px solid red !important;
+  color: red !important;
+  margin-top: 20px !important;
+  padding: 15px !important;
+}
+
+.logout-side-bar-user {
+  color: black;
+  font-family: sans-serif;
+}
+
+/* welcome screen styles */
+
+.welcome-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  padding-left: 200px;
+  background-color: #478ccf;
+  color: white;
+}
+
+.welcome-bottom-text {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-family: sans-serif;
+}
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80px;
+}
+
+.welcome-icon-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+.welcome-img {
+  padding-bottom: 20px;
+}
+
+.welcome-header {
+  font-weight: bolder;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+}
+
+.bot-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+}
+
+.welcome-text {
+  margin-bottom: 45px;
+  font-family: sans-serif;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.language-dropdown {
+  display: flex;
+  flex-direction: inherit;
+  margin-bottom: 40px;
+  font-family: sans-serif;
+  font-size: 19px;
+  text-align: center;
+  width: 145px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.error-container {
+  position: absolute;
+  bottom: 15px;
+  background-color: rgb(240, 56, 56);
+  color: white;
+  width: 300px;
+  font-size: large;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+}
+
+.start-chat-btn {
+  padding: 10px;
+  width: 230px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #fff455;
+  color: black;
+  font-family: sans-serif;
+  border-radius: 20px;
+}
+.start-chat-arrow-container {
+  margin-left: auto;
+}
+
+.hideElement {
+  display: none !important;
+}
+
+/* footer styles */
+
+.kore-chat-window .pos-relative {
+  display: flex !important;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.kore-chat-footer .chatSendMsg {
+  display: none !important;
+}
+
+.footerOuterContainer {
+  position: relative;
+  z-index: 1000;
+  background: white;
+  top: 35px;
+}
+
+.kore-chat-footer .chatInputBox {
+  margin-bottom: 0px !important;
+  margin-left: 10px;
+}
+
+.botFooterContainer {
+  margin-bottom: -18px !important;
+}
+
+.kore-chat-input-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  z-index: 1000;
+  position: relative;
+}
+
+.webchat__send-icon {
+  cursor: pointer;
+}
+.webchat__send-icon:hover {
+  fill: #c8102e !important;
+}
+
+.webchat__send-icon:active {
+  fill: #004685 !important;
+}
+
+.footer-inner-container {
+  width: 97% !important;
+  display: flex;
+}
+
+.kore-custom-chat-input {
+  border: 0px !important;
+  width: 100% !important;
+  outline: none !important;
+  background: rgb(104, 196, 238) !important;
+  margin-left: 15px !important;
+}
+
+.kore-custom-chat-input::placeholder {
+  color: rgb(160, 235, 250);
+  opacity: 1;
+  font-size: 14px;
+}
+
+.kore-chat-footer {
+  padding: 0px !important;
+}
+
+.footer-menu-icon {
+  background: white !important;
+  border: none;
+}
+
+.kore-chat-footer .recordingMicrophone .recordingGif {
+  display: none !important;
+}
+
+.footer-menu-btn {
+  color: white !important;
+  display: none;
+}
+
+.menu-item {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  background-color: white;
+  color: rgb(104, 196, 238) !important;
+  border-radius: 5px;
+  border-color: white;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+}
