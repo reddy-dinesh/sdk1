@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - koreai-test
+name: Build and deploy Node.js app to Azure Web App - koreai-test
 
 on:
   push:
@@ -16,20 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Java version
-        uses: actions/setup-java@v4
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
         with:
-          java-version: '17'
-          distribution: 'microsoft'
+          node-version: '20.x'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          name: node-app
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -37,18 +42,21 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-      
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: java-app
+          name: node-app
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
       
-      - name: Deploy to Azure Web App
+      - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'koreai-test'
           slot-name: 'Production'
-          package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_08C8677846BB49C994587FC73DF119EC }}
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_328AB816E0DF4BFF998FA9589D5CF6FC }}
